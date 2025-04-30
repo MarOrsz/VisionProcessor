@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(HelloWorld)
+project(VisionProcessor)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+message("CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
 
-
+# set(CMAKE_TOOLCHAIN_FILE "E:\\Training\\vcpkg\\vcpkg\scripts\\buildsystems\\vcpkg.cmake")
 find_package(opencv CONFIG REQUIRED)
-include_directories(${OpenCV_INCLUDE_DIRS})
 
-add_executable(HelloWorld main.cpp)
-
-target_link_libraries(HelloWorld PRIVATE ${OpenCV_LIBS})
+add_executable(vision src/main.cpp)
+target_link_libraries(vision PRIVATE ${OpenCV_LIBS})

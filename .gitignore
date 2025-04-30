@@ -1,4 +1,5 @@
-build/
-
-vcpkg_installed
+build/ 
+.vscode/ 
+*.o *.exe 
+vcpkg_installed/
 
